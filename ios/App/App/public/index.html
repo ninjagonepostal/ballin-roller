@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="dark" />
+<link rel="icon" href="data:," />
+<title>Neon Dice — Cyberpunk TTRPG Roller</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="title-block">
+      <h1>Neon <span class="neon">Dice</span></h1>
+      <p>Cyberpunk TTRPG Roller</p>
+    </div>
+    <button class="export-top" id="exportTopBtn" type="button">⬇ Export Local Copy</button>
+  </header>
+  <div class="stripe" aria-hidden="true">
+    <span style="background:var(--yellow)"></span><span style="background:var(--red)"></span>
+    <span style="background:var(--cyan)"></span><span style="background:var(--pink)"></span>
+    <span style="background:var(--violet)"></span><span style="background:var(--green)"></span>
+    <span style="background:var(--orange)"></span>
+  </div>
+
+  <section class="last-roll" id="lastRoll" aria-live="polite">
+    <span class="lr-label">Last<br />Roll</span>
+    <span class="lr-main" id="lastRollMain">No rolls yet — hit ROLL.</span>
+    <span id="lastRollBadge"></span>
+    <span class="lr-total" id="lastRollTotal">—</span>
+  </section>
+
+  <div class="layout">
+    <!-- LEFT: dice tray -->
+    <section aria-label="Dice tray">
+      <div class="col-head"><h2>Dice Tray</h2><span class="tag">Qty · Die · Mod</span></div>
+      <div class="dice-list" id="diceList"></div>
+    </section>
+
+    <!-- RIGHT: history -->
+    <section aria-label="Roll history">
+      <div class="history-panel">
+        <div class="history-head">
+          <div>
+            <h2>History Log</h2>
+            <span class="tag">On-device only · Max 100</span>
+          </div>
+          <button class="clear-btn" id="clearBtn" type="button">Clear</button>
+        </div>
+        <div class="legend">
+          <span><span class="sw" style="background:var(--max-hl)"></span>Highest die</span>
+          <span><span class="sw" style="background:var(--min-hl)"></span>Lowest die</span>
+        </div>
+        <div class="history-list" id="historyList"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- EXPORT -->
+  <section class="export-panel" aria-label="Export source code">
+    <h2>Local Source-Code Export</h2>
+    <p>
+      This roller is <strong>three small files</strong> (<code>index.html</code>,
+      <code>styles.css</code>, <code>app.js</code>) written in plain web languages —
+      no build step and nothing to compile. Keep them together in one folder and open
+      <code>index.html</code> in any browser on Android, iOS, or desktop. It works fully
+      offline, and roll history is kept only in that browser on that device — no account, no server,
+      and no data about you, your accounts, or your device is recorded or sent anywhere.
+    </p>
+    <div class="lang-chips" aria-label="Languages used">
+      <span>HTML5</span><span>CSS3</span><span>JavaScript (vanilla)</span><span>3 files · 0 dependencies</span>
+    </div>
+    <div class="export-actions">
+      <button class="btn-primary" id="exportBtn" type="button">⬇ Download neon-dice-roller.html</button>
+      <button class="btn-ghost" id="exportHistoryBtn" type="button">Download History (.txt)</button>
+    </div>
+    <p class="export-note">To run it locally: keep all three files in one folder, then double-tap / double-click index.html — it opens in your default browser like any web page. To edit it, open the files in any text or code editor.</p>
+  </section>
+
+  <footer class="foot">Rolls use your device's crypto random generator · Nothing leaves this device</footer>
+</div>
+
+<div class="toast" id="toast" role="status"></div>
+<script src="app.js"></script>
+</body>
+</html>
