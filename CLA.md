@@ -1,8 +1,8 @@
-# Contributor License Agreement — Ballin' Roller
+# Contributor License Agreement — Ballin Roller
 
 This Contributor License Agreement ("Agreement") is between you ("You" or
 "Contributor") and David "MajteK" Alexander ("Maintainer") for
-contributions to the Ballin' Roller project ("Project"), hosted at
+contributions to the Ballin Roller project ("Project"), hosted at
 https://github.com/ninjagonepostal/ballin-roller.
 
 By submitting a Contribution to the Project, You agree to the terms of

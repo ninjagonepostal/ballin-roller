@@ -1,6 +1,6 @@
-# Ballin' Roller — License in Plain English
+# Ballin Roller — License in Plain English
 
-This is a plain-English summary of the license that covers Ballin' Roller.
+This is a plain-English summary of the license that covers Ballin Roller.
 It is not the license itself.
 
 The real, legally binding license is the GNU General Public License
@@ -10,7 +10,7 @@ If you need the exact legal wording, read that file.
 
 ## The short version
 
-Ballin' Roller is free software. "Free" here means freedom, not price: you
+Ballin Roller is free software. "Free" here means freedom, not price: you
 are free to use it, copy it, share it, and change it. The one big rule is
 that you have to pass those same freedoms on to everyone else.
 
@@ -24,7 +24,7 @@ that you have to pass those same freedoms on to everyone else.
 
 ## What you have to do if you share it
 
-If you give someone a copy of Ballin' Roller, or a version you changed,
+If you give someone a copy of Ballin Roller, or a version you changed,
 you must:
 
 1. **Share the source code too.** Whoever gets your copy must be able to
@@ -53,7 +53,7 @@ and then sue you for patent infringement over it.
 
 ## Contributions
 
-If you want to contribute to Ballin' Roller, the rules for contributions
+If you want to contribute to Ballin Roller, the rules for contributions
 are in `CONTRIBUTING.md`, and the full Contributor License Agreement is
 in `CLA.md`. In short: you keep the copyright on your own work, and you
 give the project a broad license to use it, including relicensing it.
