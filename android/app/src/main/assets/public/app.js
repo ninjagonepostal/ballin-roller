@@ -1,4 +1,4 @@
-/* Neon Dice — Cyberpunk TTRPG Roller logic.
+/* Ballin' Roller — RPG Dice Roller logic.
    Copyright (C) 2026 David "MajteK" Alexander.
    This program is free software: you can redistribute it and/or modify it
    under the terms of the GNU General Public License v3.0 or later.
@@ -19,7 +19,7 @@
     { id:"d20",  sides:20,  color:"#fcee0a", colorName:"Cyberpunk Yellow" },
     { id:"d100", sides:100, color:"#b967ff", colorName:"Ultraviolet" }
   ];
-  var STORE_KEY = "neon-dice-history-v1";
+  var STORE_KEY = "ballin-roller-history-v1";
   var MAX_HISTORY = 100;
 
   /* On-device storage only. Wrapped so the file still runs (memory-only)
@@ -280,8 +280,8 @@
        step; current inputs/history are re-initialized by the script
        when the downloaded copy is opened. */
     var html = "<!doctype html>\n" + document.documentElement.outerHTML;
-    download("neon-dice-roller.html", html);
-    toast("Saved neon-dice-roller.html — keep styles.css and app.js alongside it");
+    download("ballin-roller.html", html);
+    toast("Saved ballin-roller.html — keep styles.css and app.js alongside it");
   }
   document.getElementById("exportBtn").addEventListener("click", exportSource);
   document.getElementById("exportTopBtn").addEventListener("click", exportSource);
@@ -292,7 +292,7 @@
       return "[" + fmtTime(e.ts) + "] " + formula(e) + "  →  rolls: " + e.rolls.join(", ") +
         " · dice total " + diceSum(e.rolls) + " · modifier " + fmtMod(e.mod) + " · RESULT " + e.total;
     });
-    download("dice-roll-history.txt", "NEON DICE — ROLL HISTORY\n=========================\n\n" + lines.join("\n") + "\n", "text/plain;charset=utf-8");
+    download("dice-roll-history.txt", "BALLIN' ROLLER — ROLL HISTORY\n=========================\n\n" + lines.join("\n") + "\n", "text/plain;charset=utf-8");
     toast("Saved dice-roll-history.txt");
   });
 

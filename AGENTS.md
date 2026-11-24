@@ -1,19 +1,19 @@
-# AGENTS.md — Neon Dice
+# AGENTS.md — Ballin' Roller
 
 Instructions for any coding agent (OpenCode, Claude Code, Cursor, Copilot, or Muse) working on this project. Read this file before editing anything.
 
 ## What this is
 
-Neon Dice is a Cyberpunk 2077-themed TTRPG dice roller, wrapped as a native mobile app with Capacitor 8. The roller itself is plain HTML, CSS, and vanilla JavaScript — no framework, no build step for the web code, no dependencies beyond Capacitor for the native shell.
+Ballin' Roller is a Cyberpunk 2077-themed TTRPG dice roller, wrapped as a native mobile app with Capacitor 8. The roller itself is plain HTML, CSS, and vanilla JavaScript — no framework, no build step for the web code, no dependencies beyond Capacitor for the native shell.
 
-- App name: **Neon Dice**
-- App ID: `com.neondice.app` (change before publishing; see README.md)
+- App name: **Ballin' Roller**
+- App ID: `com.ballinroller.app` (change before publishing; see README.md)
 - Capacitor: 8.x, web directory: `www/`
 
 ## Project layout
 
 ```
-neon-dice-app/
+ballin-roller/
 ├── www/                  # the dice roller — edit THESE files
 │   ├── index.html
 │   ├── styles.css
@@ -39,7 +39,7 @@ These are the owner's firm requirements. A change that violates one is wrong eve
 
 1. **Fully offline. Zero external requests.** No Google Fonts, no CDNs, no analytics, no third-party SDKs. System fonts only. Verify with a search for `http` / `https` URLs in `www/` after any change.
 2. **No data about the user, their accounts, or their device/OS is ever recorded.** No analytics, no tracking, no identifiers.
-3. **Roll history stays on-device only.** History (up to 100 rolls, newest first, key `neon-dice-history-v1`) lives in the WebView's local storage and never leaves the device. No server, no sync, no cloud backup. The CLEAR button must wipe it.
+3. **Roll history stays on-device only.** History (up to 100 rolls, newest first, key `ballin-roller-history-v1`) lives in the WebView's local storage and never leaves the device. No server, no sync, no cloud backup. The CLEAR button must wipe it.
 4. **Rolls use the device's crypto random generator** (`crypto.getRandomValues`), not `Math.random`.
 
 ## Design rules
@@ -60,7 +60,7 @@ These are the owner's firm requirements. A change that violates one is wrong eve
 ## Build
 
 ```bash
-cd neon-dice-app
+cd ballin-roller
 npm install        # required first — node_modules/ is not in the zip
 npx cap sync
 npx cap open android   # Android Studio

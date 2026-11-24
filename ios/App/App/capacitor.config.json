@@ -1,6 +1,6 @@
 {
-	"appId": "com.neondice.app",
-	"appName": "Neon Dice",
+	"appId": "com.ballinroller.app",
+	"appName": "Ballin' Roller",
 	"webDir": "www",
 	"packageClassList": []
 }
