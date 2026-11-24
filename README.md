@@ -18,14 +18,14 @@ IF you see any ads, discover data is being tracked, aside from keeping a history
 
 ---
 
-# Ballin' Roller — Native App Project (Android + iOS)
+# Ballin Roller — Native App Project (Android + iOS)
 
-A Capacitor 8 project that wraps the Ballin' Roller cyberpunk TTRPG dice roller
+A Capacitor 8 project that wraps the Ballin Roller cyberpunk TTRPG dice roller
 as a real installable mobile app. The roller itself is plain HTML, CSS, and
 vanilla JavaScript in `www/`; Capacitor hosts it in a native WebView shell
 with an Android project in `android/` and an Xcode project in `ios/`.
 
-- App name: **Ballin' Roller**
+- App name: **Ballin Roller**
 - App ID: **com.ballinroller.app** (change it to your own domain before
   publishing — see below)
 - Capacitor: 8.x, web directory: `www/`
@@ -132,7 +132,7 @@ See https://capacitorjs.com/docs/guides/splash-screens-and-icons
 
 ## License
 
-Ballin' Roller is free software, licensed under the **GNU General Public License
+Ballin Roller is free software, licensed under the **GNU General Public License
 v3.0 or later** — see `LICENSE`. Copyright (C) 2026 David "MajteK"
 Alexander. The source is free for anyone to read, build, and use; the $2
 app-store install is for the packaged build. Contributions are welcome under

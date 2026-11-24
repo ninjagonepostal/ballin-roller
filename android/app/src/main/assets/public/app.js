@@ -1,4 +1,4 @@
-/* Ballin' Roller — RPG Dice Roller logic.
+/* Ballin Roller — RPG Dice Roller logic.
    Copyright (C) 2026 David "MajteK" Alexander.
    This program is free software: you can redistribute it and/or modify it
    under the terms of the GNU General Public License v3.0 or later.
@@ -292,7 +292,7 @@
       return "[" + fmtTime(e.ts) + "] " + formula(e) + "  →  rolls: " + e.rolls.join(", ") +
         " · dice total " + diceSum(e.rolls) + " · modifier " + fmtMod(e.mod) + " · RESULT " + e.total;
     });
-    download("dice-roll-history.txt", "BALLIN' ROLLER — ROLL HISTORY\n=========================\n\n" + lines.join("\n") + "\n", "text/plain;charset=utf-8");
+    download("dice-roll-history.txt", "BALLIN ROLLER — ROLL HISTORY\n=========================\n\n" + lines.join("\n") + "\n", "text/plain;charset=utf-8");
     toast("Saved dice-roll-history.txt");
   });
 

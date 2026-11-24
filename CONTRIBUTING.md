@@ -1,6 +1,6 @@
-# Contributing to Ballin' Roller
+# Contributing to Ballin Roller
 
-Ballin' Roller is a Cyberpunk 2077-themed TTRPG dice roller, plain HTML/CSS/vanilla
+Ballin Roller is a Cyberpunk 2077-themed TTRPG dice roller, plain HTML/CSS/vanilla
 JavaScript wrapped as a native app with Capacitor 8. Before contributing, read
 `AGENTS.md` — especially the hard rules: fully offline with zero external
 requests, no data about the user / their accounts / their device is ever
@@ -9,7 +9,7 @@ recorded, roll history stays on-device only, and rolls use
 
 ## License
 
-Ballin' Roller is licensed under the **GNU General Public License v3.0 or later**
+Ballin Roller is licensed under the **GNU General Public License v3.0 or later**
 (GPLv3+). See `LICENSE`. Copyright (C) 2026 David "MajteK" Alexander.
 
 The source is free — anyone can read it, build it, and use it. The $2
@@ -33,18 +33,18 @@ app collects none.
 
 ## Contributor License Agreement (CLA)
 
-David "MajteK" Alexander is the sole copyright holder of Ballin' Roller. This
+David "MajteK" Alexander is the sole copyright holder of Ballin Roller. This
 agreement exists so the project can stay GPLv3 **and** stay publishable on
 the app stores, where a GPLv3 project with outside co-copyright-holders
 could run into trouble. It is a license agreement, not a copyright
 assignment: **you keep the copyright in your own contributions.**
 
-By submitting a pull request (or any other contribution) to Ballin' Roller, you
+By submitting a pull request (or any other contribution) to Ballin Roller, you
 agree to the following:
 
 1. **Your contribution is licensed under GPLv3.** You license your
    contribution under the GNU General Public License v3.0 or later, the
-   same license as the rest of Ballin' Roller.
+   same license as the rest of Ballin Roller.
 2. **You grant David "MajteK" Alexander a broad license to your
    contribution.** You grant him a perpetual, worldwide, non-exclusive,
    royalty-free, irrevocable license to use, reproduce, modify, distribute,
@@ -71,7 +71,7 @@ it will ask you to sign.
 If you would like your agreement on record, paste the following into your
 first pull request:
 
-> I, [your full name / GitHub username], agree to the Ballin' Roller Contributor
+> I, [your full name / GitHub username], agree to the Ballin Roller Contributor
 > License Agreement in CONTRIBUTING.md. I license my contributions under
 > GPLv3 or later and grant David "MajteK" Alexander the license described
 > in section 2 of that agreement.

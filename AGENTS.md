@@ -1,12 +1,12 @@
-# AGENTS.md — Ballin' Roller
+# AGENTS.md — Ballin Roller
 
 Instructions for any coding agent (OpenCode, Claude Code, Cursor, Copilot, or Muse) working on this project. Read this file before editing anything.
 
 ## What this is
 
-Ballin' Roller is a Cyberpunk 2077-themed TTRPG dice roller, wrapped as a native mobile app with Capacitor 8. The roller itself is plain HTML, CSS, and vanilla JavaScript — no framework, no build step for the web code, no dependencies beyond Capacitor for the native shell.
+Ballin Roller is a Cyberpunk 2077-themed TTRPG dice roller, wrapped as a native mobile app with Capacitor 8. The roller itself is plain HTML, CSS, and vanilla JavaScript — no framework, no build step for the web code, no dependencies beyond Capacitor for the native shell.
 
-- App name: **Ballin' Roller**
+- App name: **Ballin Roller**
 - App ID: `com.ballinroller.app` (change before publishing; see README.md)
 - Capacitor: 8.x, web directory: `www/`
 
