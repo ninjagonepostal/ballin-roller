@@ -69,4 +69,4 @@ npx cap open ios       # Xcode, macOS only
 
 - iOS builds need a Mac with Xcode. Installing on a real iPhone or submitting to the App Store needs an Apple Developer account.
 - `npx cap doctor` checks the environment for issues.
-- The project currently uses Capacitor's default placeholder icon. See README.md for generating a real icon/splash from a 1024×1024 `icon.png`.
+- The app icon is a neon d20 (Cyberpunk Yellow die, cyan edges, "20" on the face). Sources live in `assets/` (`icon.png` 1024×1024, `splash.png` 2732×2732); regenerate all sizes with `npx capacitor-assets generate` — see README.md.

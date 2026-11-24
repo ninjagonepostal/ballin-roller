@@ -97,8 +97,10 @@ Never edit the copied files under `android/app/src/main/assets/public/` or
 
 ## App icon and splash screen
 
-The project currently uses Capacitor's default placeholder icon. To use
-your own artwork:
+The app icon is a neon d20 — Cyberpunk Yellow die with cyan edges and a
+"20" on the face, on black. The source artwork lives in `assets/`
+(`icon.png` 1024×1024, `splash.png` 2732×2732). To regenerate all the
+Android/iOS sizes from those sources:
 
 ```bash
 npm install -D @capacitor/assets
@@ -106,9 +108,7 @@ npx capacitor-assets generate --iconBackgroundColor '#05060a' \
   --splashBackgroundColor '#05060a'
 ```
 
-Place a 1024×1024 `icon.png` (and optionally a 2732×2732 `splash.png`)
-in an `assets/` folder first — see
-https://capacitorjs.com/docs/guides/splash-screens-and-icons
+See https://capacitorjs.com/docs/guides/splash-screens-and-icons
 
 ## License
 
