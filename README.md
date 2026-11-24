@@ -18,15 +18,15 @@ IF you see any ads, discover data is being tracked, aside from keeping a history
 
 ---
 
-# Neon Dice — Native App Project (Android + iOS)
+# Ballin' Roller — Native App Project (Android + iOS)
 
-A Capacitor 8 project that wraps the Neon Dice cyberpunk TTRPG dice roller
+A Capacitor 8 project that wraps the Ballin' Roller cyberpunk TTRPG dice roller
 as a real installable mobile app. The roller itself is plain HTML, CSS, and
 vanilla JavaScript in `www/`; Capacitor hosts it in a native WebView shell
 with an Android project in `android/` and an Xcode project in `ios/`.
 
-- App name: **Neon Dice**
-- App ID: **com.neondice.app** (change it to your own domain before
+- App name: **Ballin' Roller**
+- App ID: **com.ballinroller.app** (change it to your own domain before
   publishing — see below)
 - Capacitor: 8.x, web directory: `www/`
 - No Capacitor plugins are used, so the app makes zero network requests:
@@ -36,7 +36,7 @@ with an Android project in `android/` and an Xcode project in `ios/`.
 ## Project layout
 
 ```
-neon-dice-app/
+ballin-roller/
 ├── www/                  # the dice roller web app (edit these files)
 │   ├── index.html
 │   ├── styles.css
@@ -63,7 +63,7 @@ neon-dice-app/
 ## First-time setup
 
 ```bash
-cd neon-dice-app
+cd ballin-roller
 npm install
 npx cap sync
 ```
@@ -132,7 +132,7 @@ See https://capacitorjs.com/docs/guides/splash-screens-and-icons
 
 ## License
 
-Neon Dice is free software, licensed under the **GNU General Public License
+Ballin' Roller is free software, licensed under the **GNU General Public License
 v3.0 or later** — see `LICENSE`. Copyright (C) 2026 David "MajteK"
 Alexander. The source is free for anyone to read, build, and use; the $2
 app-store install is for the packaged build. Contributions are welcome under
