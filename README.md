@@ -206,7 +206,7 @@ Never edit the copied files under `android/app/src/main/assets/public/` or
 
 ## App icon and splash screen
 
-The app icon is a neon d20 — Cyberpunk Yellow die with cyan edges and a
+The app icon is a neon d20 — yellow die with cyan edges and a
 "20" on the face, on black. The source artwork lives in `assets/`
 (`icon.png` 1024×1024, `splash.png` 2732×2732). To regenerate all the
 Android/iOS sizes from those sources:
