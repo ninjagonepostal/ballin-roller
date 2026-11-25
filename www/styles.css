@@ -157,7 +157,6 @@
   }
   @media (prefers-reduced-motion: reduce){ .die-btn.rolling svg{ animation:none; } }
   .die-name{ font-family:var(--font-display); font-weight:700; font-size:15px; color:var(--die); letter-spacing:.05em; line-height:1.1; }
-  .die-color-name{ font-size:9.5px; letter-spacing:.14em; color:var(--ink-faint); font-weight:700; text-transform:uppercase; white-space:nowrap; }
 
   .roll-btn{
     grid-area:roll;
@@ -279,11 +278,21 @@
     .last-roll .lr-total{ font-size:42px; }
   }
 
-/* Touch devices: guarantee bottom clearance for the navigation bar even
-   when the WebView reports a 0 bottom inset (some devices with 3-button
-   navigation do). 64px covers the tallest stock nav bars; env() wins
-   when it reports something larger. */
+/* Touch devices: the app area must end ABOVE the navigation bar — padding
+   at the end of the page is not enough, because rows scroll under the
+   buttons mid-scroll. So .wrap itself becomes the scroll container, and
+   its height stops short of the nav bar (64px covers the tallest stock
+   nav bars; env() wins when it reports something larger). The body no
+   longer scrolls, so nothing in the app can ever slide under the nav
+   buttons. Desktop keeps normal page scrolling. */
 @media (pointer: coarse){
-  .wrap{ padding-bottom:calc(28px + max(env(safe-area-inset-bottom, 0px), 64px)); }
+  html, body{ height:100%; }
+  body{ min-height:0; overflow:hidden; }
+  .wrap{
+    height:calc(100% - max(env(safe-area-inset-bottom, 0px), 64px));
+    height:calc(100dvh - max(env(safe-area-inset-bottom, 0px), 64px));
+    overflow-y:auto;
+    padding-bottom:calc(28px + max(env(safe-area-inset-bottom, 0px), 64px));
+  }
   .toast{ bottom:calc(22px + max(env(safe-area-inset-bottom, 0px), 64px)); }
 }

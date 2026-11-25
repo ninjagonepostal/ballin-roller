@@ -99,7 +99,6 @@
       '<div class="die-cell">' +
         '<button type="button" class="die-btn" data-act="roll" aria-label="Roll ' + d.id + '">' + dieShape(d) + '</button>' +
         '<span class="die-name">' + d.id + '</span>' +
-        '<span class="die-color-name">' + d.colorName + '</span>' +
       '</div>' +
       '<div class="stepper mod">' +
         '<span class="s-label">Mod</span>' +

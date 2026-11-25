@@ -70,3 +70,9 @@ npx cap open ios       # Xcode, macOS only
 - iOS builds need a Mac with Xcode. Installing on a real iPhone or submitting to the App Store needs an Apple Developer account.
 - `npx cap doctor` checks the environment for issues.
 - The app icon is a neon d20 (Cyberpunk Yellow die, cyan edges, "20" on the face). Sources live in `assets/` (`icon.png` 1024×1024, `splash.png` 2732×2732); regenerate all sizes with `npx capacitor-assets generate` — see README.md.
+
+## Notes from live device testing (2026-11-25)
+
+- **No Android permissions.** The Capacitor default `INTERNET` permission was removed from `android/app/src/main/AndroidManifest.xml` — the app makes no network requests. Do not re-add it; if the app ever fails to load, this is the first thing to check.
+- **Scrolling on touch devices.** The page itself does not scroll — `.wrap` is the scroll container (`overflow-y:auto`) and its height ends above the Android navigation bar, so content never slides under the nav buttons. Padding at the end of the page alone does NOT fix this (rows still pass under the bar mid-scroll). Do not move scrolling back to the body.
+- **Color names are data only.** The `colorName` values in `app.js` (e.g. "Arasaka Red", "Cyberpunk Yellow") are not displayed under the dice in the UI — the owner asked for the labels to be removed. The die colors themselves still show.
