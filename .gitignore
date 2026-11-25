@@ -12,5 +12,11 @@ android/build/
 ios/App/build/
 ios/DerivedData/
 
+# Signing keys — never commit these. The repo is public.
+local.properties
+*.jks
+*.keystore
+keystore.properties
+
 # OS files
 .DS_Store
