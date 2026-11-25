@@ -74,5 +74,6 @@ npx cap open ios       # Xcode, macOS only
 ## Notes from live device testing (2026-11-25)
 
 - **No Android permissions.** The Capacitor default `INTERNET` permission was removed from `android/app/src/main/AndroidManifest.xml` — the app makes no network requests. Do not re-add it; if the app ever fails to load, this is the first thing to check.
+- **No cloud backup.** `android:allowBackup` is `false` in the manifest — no app data is worth backing up, and roll history stays off Google's backup servers.
 - **Scrolling on touch devices.** The page itself does not scroll — `.wrap` is the scroll container (`overflow-y:auto`) and its height ends above the Android navigation bar, so content never slides under the nav buttons. Padding at the end of the page alone does NOT fix this (rows still pass under the bar mid-scroll). Do not move scrolling back to the body.
 - **No branded color names.** All color names were scrubbed from the code and docs on 2026-11-25. Dice are identified by hex color only — do not reintroduce trademarked color names.
