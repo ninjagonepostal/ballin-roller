@@ -9,15 +9,15 @@
   "use strict";
 
   /* Dice ranked by popularity — most-rolled dice get the most
-     eye-catching Cyberpunk 2077 colors. Every die keeps a unique color. */
+     eye-catching neon colors. Every die keeps a unique color. */
   var DICE = [
-    { id:"d4",   sides:4,   color:"#39ff14", colorName:"Toxic Green" },
-    { id:"d6",   sides:6,   color:"#ff003c", colorName:"Arasaka Red" },
-    { id:"d8",   sides:8,   color:"#ff2e9e", colorName:"Neon Pink" },
-    { id:"d10",  sides:10,  color:"#00e5ff", colorName:"Neon Cyan" },
-    { id:"d12",  sides:12,  color:"#ff7a00", colorName:"Neon Orange" },
-    { id:"d20",  sides:20,  color:"#fcee0a", colorName:"Cyberpunk Yellow" },
-    { id:"d100", sides:100, color:"#b967ff", colorName:"Ultraviolet" }
+    { id:"d4",   sides:4,   color:"#39ff14" },
+    { id:"d6",   sides:6,   color:"#ff003c" },
+    { id:"d8",   sides:8,   color:"#ff2e9e" },
+    { id:"d10",  sides:10,  color:"#00e5ff" },
+    { id:"d12",  sides:12,  color:"#ff7a00" },
+    { id:"d20",  sides:20,  color:"#fcee0a" },
+    { id:"d100", sides:100, color:"#b967ff" }
   ];
   var STORE_KEY = "ballin-roller-history-v1";
   var MAX_HISTORY = 100;
@@ -174,7 +174,7 @@
     for (var i = 0; i < st.qty; i++) rolls.push(rollDie(d.sides));
     var total = diceSum(rolls) + st.mod;
     var entry = {
-      die: d.id, sides: d.sides, color: d.color, colorName: d.colorName,
+      die: d.id, sides: d.sides, color: d.color,
       qty: st.qty, mod: st.mod, rolls: rolls, total: total, ts: Date.now()
     };
     setTimeout(function(){
