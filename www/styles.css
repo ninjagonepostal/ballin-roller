@@ -256,6 +256,7 @@
   .toast.show{ opacity:1; transform:translateX(-50%) translateY(0); }
 
   footer.foot{ margin-top:16px; color:var(--ink-faint); font-size:12px; font-weight:600; letter-spacing:.08em; text-align:center; text-transform:uppercase; }
+  footer.foot a{ color:inherit; text-decoration:underline; }
 
   /* ---------- desktop ---------- */
   @media (min-width: 860px){
