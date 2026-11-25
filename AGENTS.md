@@ -4,7 +4,7 @@ Instructions for any coding agent (OpenCode, Claude Code, Cursor, Copilot, or Mu
 
 ## What this is
 
-Ballin Roller is a Cyberpunk 2077-themed TTRPG dice roller, wrapped as a native mobile app with Capacitor 8. The roller itself is plain HTML, CSS, and vanilla JavaScript — no framework, no build step for the web code, no dependencies beyond Capacitor for the native shell.
+Ballin Roller is a cyberpunk-inspired TTRPG dice roller, wrapped as a native mobile app with Capacitor 8. The roller itself is plain HTML, CSS, and vanilla JavaScript — no framework, no build step for the web code, no dependencies beyond Capacitor for the native shell.
 
 - App name: **Ballin Roller**
 - App ID: `com.ballinroller.app` (change before publishing; see README.md)
@@ -45,7 +45,7 @@ These are the owner's firm requirements. A change that violates one is wrong eve
 ## Design rules
 
 - **Compact two-column layout on a vertical phone screen.** Left column: dice list. Right column: history. Both must fit side-by-side without horizontal scrolling.
-- **Each die type has a unique Cyberpunk 2077 color**, ranked by die popularity / marketing appeal — most-rolled dice get the most eye-catching colors. Do not reassign colors casually; if a color change is requested, keep every die unique and keep the ranking. Current mapping (in `www/app.js`, `DICE`):
+- **Each die type has a unique neon color**, ranked by die popularity / marketing appeal — most-rolled dice get the most eye-catching colors. Do not reassign colors casually; if a color change is requested, keep every die unique and keep the ranking. Current mapping (in `www/app.js`, `DICE`):
   - d20 — yellow `#fcee0a`
   - d6 — red `#ff003c`
   - d10 — cyan `#00e5ff`
@@ -75,4 +75,4 @@ npx cap open ios       # Xcode, macOS only
 
 - **No Android permissions.** The Capacitor default `INTERNET` permission was removed from `android/app/src/main/AndroidManifest.xml` — the app makes no network requests. Do not re-add it; if the app ever fails to load, this is the first thing to check.
 - **Scrolling on touch devices.** The page itself does not scroll — `.wrap` is the scroll container (`overflow-y:auto`) and its height ends above the Android navigation bar, so content never slides under the nav buttons. Padding at the end of the page alone does NOT fix this (rows still pass under the bar mid-scroll). Do not move scrolling back to the body.
-- **Color names are data only.** The `colorName` values in `app.js` are not displayed under the dice in the UI — the owner asked for the labels to be removed (2026-11-25). The die colors themselves still show.
+- **No branded color names.** All color names were scrubbed from the code and docs on 2026-11-25. Dice are identified by hex color only — do not reintroduce trademarked color names.

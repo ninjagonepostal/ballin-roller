@@ -1,6 +1,6 @@
 # Contributing to Ballin Roller
 
-Ballin Roller is a Cyberpunk 2077-themed TTRPG dice roller, plain HTML/CSS/vanilla
+Ballin Roller is a cyberpunk-inspired TTRPG dice roller, plain HTML/CSS/vanilla
 JavaScript wrapped as a native app with Capacitor 8. Before contributing, read
 `AGENTS.md` — especially the hard rules: fully offline with zero external
 requests, no data about the user / their accounts / their device is ever
@@ -23,10 +23,11 @@ app collects none.
 2. Edit only the files in `www/` (`index.html`, `styles.css`, `app.js`), then
    run `npx cap sync` — never edit the copied files under
    `android/app/src/main/assets/public/` or `ios/App/App/public/` directly.
-3. Keep every die type on its own unique Cyberpunk 2077 color (see
+3. Keep every die type on its own unique neon color (see
    `AGENTS.md` for the mapping) and keep the two-column layout compact on a
    vertical phone screen.
-4. Verify no external URLs were added: search `www/` for `http` / `https`
+4. Verify no external URLs were added (except the footer Privacy Policy link,
+   which Google Play requires): search `www/` for `http` / `https`
    after any change.
 5. Say what you changed and why in the pull request. If you modified a roll,
    note that the change was tested.
