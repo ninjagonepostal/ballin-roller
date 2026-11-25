@@ -40,7 +40,18 @@
   button, input{ min-height:2rem; }
   :focus-visible{ outline:2px solid var(--cyan); outline-offset:2px; }
 
-  .wrap{ max-width:1180px; margin:0 auto; padding:14px 12px 28px; }
+  /* Safe-area insets: the viewport uses viewport-fit=cover, so the WebView
+     extends under the status bar / display cutout. Without these, the header
+     slides under the notification bar on real devices. env() is 0 where the
+     device reports no inset, so this is a no-op on desktop. */
+  .wrap{
+    max-width:1180px; margin:0 auto;
+    padding:
+      calc(14px + env(safe-area-inset-top, 0px))
+      calc(12px + env(safe-area-inset-right, 0px))
+      calc(28px + env(safe-area-inset-bottom, 0px))
+      calc(12px + env(safe-area-inset-left, 0px));
+  }
 
   /* ---------- header ---------- */
   header.top{ display:flex; align-items:flex-end; justify-content:space-between; gap:10px; flex-wrap:wrap; }
@@ -161,7 +172,7 @@
   .history-panel{
     background:linear-gradient(180deg, var(--panel2), var(--panel));
     border:1px solid var(--line); border-radius:var(--radius);
-    position:sticky; top:10px;
+    position:sticky; top:calc(10px + env(safe-area-inset-top, 0px));
     display:flex; flex-direction:column; overflow:hidden;
   }
   .history-head{
@@ -237,7 +248,7 @@
   .btn-primary:active, .btn-ghost:active{ transform:translateY(1px); }
   .export-note{ font-size:12.5px !important; color:var(--ink-faint) !important; }
   .toast{
-    position:fixed; left:50%; bottom:22px; transform:translateX(-50%) translateY(20px);
+    position:fixed; left:50%; bottom:calc(22px + env(safe-area-inset-bottom, 0px)); transform:translateX(-50%) translateY(20px);
     background:#14161f; border:1px solid var(--yellow); color:var(--ink);
     font-weight:700; font-size:14px; letter-spacing:.05em; padding:10px 16px; border-radius:8px;
     opacity:0; pointer-events:none; transition:opacity .25s, transform .25s; z-index:50;
@@ -249,7 +260,13 @@
 
   /* ---------- desktop ---------- */
   @media (min-width: 860px){
-    .wrap{ padding:22px 20px 36px; }
+    .wrap{
+      padding:
+        calc(22px + env(safe-area-inset-top, 0px))
+        calc(20px + env(safe-area-inset-right, 0px))
+        calc(36px + env(safe-area-inset-bottom, 0px))
+        calc(20px + env(safe-area-inset-left, 0px));
+    }
     .layout{ grid-template-columns:minmax(0, 1.25fr) minmax(0, 1fr); gap:18px; }
     .die-row{ grid-template-columns:58px minmax(0,1fr) 58px; padding:10px 12px; column-gap:12px; }
     .die-btn svg{ width:84px; height:84px; }
