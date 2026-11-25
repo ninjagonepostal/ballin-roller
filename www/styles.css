@@ -278,3 +278,12 @@
     .h-eq{ font-size:13.5px; }
     .last-roll .lr-total{ font-size:42px; }
   }
+
+/* Touch devices: guarantee bottom clearance for the navigation bar even
+   when the WebView reports a 0 bottom inset (some devices with 3-button
+   navigation do). 64px covers the tallest stock nav bars; env() wins
+   when it reports something larger. */
+@media (pointer: coarse){
+  .wrap{ padding-bottom:calc(28px + max(env(safe-area-inset-bottom, 0px), 64px)); }
+  .toast{ bottom:calc(22px + max(env(safe-area-inset-bottom, 0px), 64px)); }
+}
