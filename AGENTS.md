@@ -56,6 +56,7 @@ These are the owner's firm requirements. A change that violates one is wrong eve
   - The color flows through the die, its QTY/MOD steppers, its ROLL button, and its history rows.
 - **History shows the equation, not number squares.** Highlight the highest roll in yellow and the lowest in pink within the equation. Keep the NAT 20 / NAT 1 badges.
 - Keep the layout compact: small dice, vertical QTY and MOD steppers, narrow ROLL buttons.
+- **Compact fit (2026-11-26): all seven dice must fit above the fold on a vertical phone** — about 720px from the top of `.wrap` to the bottom of the d100 row on a 390px-wide screen, so d12, d20 and d100 need no scrolling. What buys the height: per-row QTY/MOD labels dropped (the "Qty · Die · Mod" column header maps left-to-right; `aria-label`s kept), the die name under each die dropped (the ROLL button carries it, e.g. "ROLL d20"), dice are 42px, stepper controls are 20px, ROLL buttons are 22px, header is one line (top export button shortened to "⬇ Export"), last-roll banner is 48px and locked to one line with ellipsis so a long formula can't push the dice down. The export panel and footer still sit below the fold — scrolling for those is expected. Desktop (`min-width: 860px`) keeps the roomy layout.
 
 ## Build
 

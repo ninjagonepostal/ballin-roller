@@ -91,22 +91,19 @@
     row.style.setProperty("--die", d.color);
     row.innerHTML =
       '<div class="stepper qty">' +
-        '<span class="s-label">Qty</span>' +
         '<button type="button" data-act="qty+" aria-label="Add one ' + d.id + '">+</button>' +
         '<input type="number" inputmode="numeric" min="1" max="50" value="1" data-field="qty" aria-label="Number of ' + d.id + ' dice" />' +
         '<button type="button" data-act="qty-" aria-label="Remove one ' + d.id + '">−</button>' +
       '</div>' +
       '<div class="die-cell">' +
         '<button type="button" class="die-btn" data-act="roll" aria-label="Roll ' + d.id + '">' + dieShape(d) + '</button>' +
-        '<span class="die-name">' + d.id + '</span>' +
       '</div>' +
       '<div class="stepper mod">' +
-        '<span class="s-label">Mod</span>' +
         '<button type="button" data-act="mod+" aria-label="Increase ' + d.id + ' modifier">+</button>' +
         '<input type="number" inputmode="numeric" min="-50" max="50" value="0" data-field="mod" aria-label="' + d.id + ' roll modifier" />' +
         '<button type="button" data-act="mod-" aria-label="Decrease ' + d.id + ' modifier">−</button>' +
       '</div>' +
-      '<button type="button" class="roll-btn" data-act="roll">Roll</button>';
+      '<button type="button" class="roll-btn" data-act="roll">Roll ' + d.id + '</button>';
 
     row.addEventListener("click", function(ev){
       var btn = ev.target.closest("button");
