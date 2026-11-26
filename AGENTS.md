@@ -47,7 +47,7 @@ These are the owner's firm requirements. A change that violates one is wrong eve
 - **Compact two-column layout on a vertical phone screen.** Left column: dice list. Right column: history. Both must fit side-by-side without horizontal scrolling.
 - **Each die type has a unique neon color**, ranked by die popularity / marketing appeal — most-rolled dice get the most eye-catching colors. Do not reassign colors casually; if a color change is requested, keep every die unique and keep the ranking. Current mapping (in `www/app.js`, `DICE`):
   - d20 — yellow `#fcee0a`
-  - d6 — red `#ff003c`
+  - d6 — blue `#2e7bff` (changed 2026-11-26: red clashed with the lowest-roll marker)
   - d10 — cyan `#00e5ff`
   - d8 — pink `#ff2e9e`
   - d100 — violet `#b967ff`

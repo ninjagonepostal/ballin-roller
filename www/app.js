@@ -12,7 +12,7 @@
      eye-catching neon colors. Every die keeps a unique color. */
   var DICE = [
     { id:"d4",   sides:4,   color:"#39ff14" },
-    { id:"d6",   sides:6,   color:"#ff003c" },
+    { id:"d6",   sides:6,   color:"#2e7bff" },
     { id:"d8",   sides:8,   color:"#ff2e9e" },
     { id:"d10",  sides:10,  color:"#00e5ff" },
     { id:"d12",  sides:12,  color:"#ff7a00" },
