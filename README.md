@@ -1,6 +1,6 @@
 # ballin-roller
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/ninjagonepostal/ballin-roller/blob/dev/package.json)
+[![Version](https://img.shields.io/badge/version-1.1.0-blue.svg)](https://github.com/ninjagonepostal/ballin-roller/blob/dev/package.json)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
 
 Dice roller app
